@@ -73,15 +73,15 @@ When a user interacts with UI
 # For Example: Send Money Flow
 1 -> You Send Money:
 SendMoneySection
--> addTransaction() - it calls a funtion in central context
--> dashboardApi.createTransaction() - checks permission and calls a API Layer to create a Transaction
--> localStorage updated - saves the transaction in localStorage
--> state.transaction updated - the context updates the global state
--> Everything updates automatically (Hero / Transactions / Analytics / Recent History update)
+2 -> addTransaction() - it calls a funtion in central context
+3 -> dashboardApi.createTransaction() - checks permission and calls a API Layer to create a Transaction
+4 -> localStorage updated - saves the transaction in localStorage
+5 -> state.transaction updated - the context updates the global state
+6 -> Everything updates automatically (Hero / Transactions / Analytics / Recent History update)
 
 ## Storage and Persistence
 Project stores the data in localStorage
-fin-dashboard:moch-api
+fin-dashboard:mock-api
 - transactions
 - recurring
 - monthlyBudget
