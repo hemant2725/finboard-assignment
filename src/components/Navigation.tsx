@@ -196,7 +196,7 @@ export function Navigation() {
                     </SelectItem>
                     <SelectItem value="admin" className="text-text-primary">
                       <span className="flex items-center gap-2">
-                        <Shield className="w-4 h-4 text-lime" /> 
+                        <Shield className="w-4 h-4" /> 
                         Admin
                       </span>
                     </SelectItem>
