@@ -1,0 +1,267 @@
+/* App-specific styles */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(182, 255, 46, 0.3);
+  color: #F4F4F5;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #B6FF2E;
+  outline-offset: 2px;
+}
+
+/* Button hover transitions */
+button {
+  transition: all 0.2s ease;
+}
+
+/* Card hover effects */
+.glass-card {
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(182, 255, 46, 0.2);
+}
+
+/* Input focus styles */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: rgba(182, 255, 46, 0.5) !important;
+  box-shadow: 0 0 0 2px rgba(182, 255, 46, 0.1);
+}
+
+/* Chart tooltip styles */
+.recharts-tooltip-wrapper {
+  z-index: 1000;
+}
+
+/* Scrollbar styling for webkit */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07070A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Animation utilities */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(182, 255, 46, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(182, 255, 46, 0.4);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.25 !important;
+  }
+
+  h3 {
+    font-size: 1.125rem !important;
+  }
+}
+
+/* Touch-friendly tap targets on mobile */
+/* Touch-friendly tap targets on mobile */
+@media (max-width: 768px) {
+  button:not([role="switch"]),
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+  }
+}
+
+/* Fix toggle button dimensions on mobile */
+button[role="switch"] {
+  min-height: auto !important;
+  height: 24px !important;
+  width: 44px !important;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Dialog overlay */
+[data-state="open"] > [data-radix-dialog-overlay] {
+  background: rgba(7, 7, 10, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+/* Dropdown menu styles */
+[role="listbox"] {
+  background: #0F0F14 !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+[role="option"] {
+  color: #F4F4F5 !important;
+}
+
+[role="option"]:hover,
+[role="option"][data-highlighted="true"] {
+  background: rgba(182, 255, 46, 0.1) !important;
+  color: #B6FF2E !important;
+}
+
+/* Switch styles */
+[data-slot="switch"][data-state="checked"] {
+  background-color: #B6FF2E !important;
+}
+ 
+/* Progress bar animation */
+@keyframes progress-shine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.progress-shine {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: progress-shine 2s linear infinite;
+}
+
+/* Modal animations */
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-modal-in {
+  animation: modal-in 0.2s ease-out;
+}
+
+/* Toast animations */
+[data-sonner-toast] {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .card-shadow {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .glass-card {
+    backdrop-filter: blur(8px);
+  }
+}
+
+/* Ensure proper stacking */
+.z-nav {
+  z-index: 100;
+}
+
+.z-modal {
+  z-index: 200;
+}
+
+.z-toast {
+  z-index: 300;
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Print styles */
+@media print {
+  .grain-overlay,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
