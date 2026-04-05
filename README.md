@@ -158,7 +158,7 @@ This makes it easy to swap the mock layer for a real backend later without rewri
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/hemant2725/finboard-assignment.git](https://github.com/hemant2725/finboard-assignment.git)
+    git clone [https://github.com/hemant2725/finboard-assignment.git]
     ```
 2.  **Navigate to the project directory:**
     ```bash
@@ -173,3 +173,8 @@ This makes it easy to swap the mock layer for a real backend later without rewri
 
 ```bash
 npm run dev
+```
+## Build
+```bash
+npm run build
+```
