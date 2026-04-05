@@ -162,7 +162,7 @@ This makes it easy to swap the mock layer for a real backend later without rewri
     ```
 2.  **Navigate to the project directory:**
     ```bash
-    cd finboard-assignment/app
+    cd finboard-assignment
     ```
 3.  **Install dependencies:**
     ```bash
