@@ -154,24 +154,22 @@ This makes it easy to swap the mock layer for a real backend later without rewri
 - Node.js 18+
 - npm or yarn
 
-### Setup
+## Setup
 
-1. **Install dependencies**
-```bash
-npm install
-```
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/hemant2725/finboard-assignment.git](https://github.com/hemant2725/finboard-assignment.git)
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd finboard-assignment/app
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-2. **Run the development server**
+### Development Server
+
 ```bash
 npm run dev
-```
-
-3. **Create a production build**
-```bash
-npm run build
-```
-
-4. **Preview the production build**
-```bash
-npm run preview
-```
