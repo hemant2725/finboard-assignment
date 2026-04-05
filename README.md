@@ -152,7 +152,7 @@ This makes it easy to swap the mock layer for a real backend later without rewri
 
 ### Prerequisites
 - Node.js 18+
-- npm or yarn
+- npm
 
 ## Setup
 
