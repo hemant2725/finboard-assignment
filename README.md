@@ -4,8 +4,6 @@ This project is about frontend phase of finance dashboard built with ReactJS, Ty
 
 ## Project Summary
 
-FinDashboard is a frontend only finance dashboard that simulates a realistic product flow while the business data flows through a single shared context:
-
 - implemented a mock API layer
 -  also has a persistent local storage
 - make it centralized state management with Context API
@@ -27,7 +25,7 @@ FinDashboard is a frontend only finance dashboard that simulates a realistic pro
 - Admin can perform operations such as add, edit, and delete
 
 ## Additional Features
-- User can track and manage thier recurring expenses
+- User can track and manage thier recurring (like subscriptions) expenses
 - While fetching the data it handles gracefully using loading states
 - Implemented a Proper Error Handling with error message and with retry options
 - Implemented a Responsiveness across all devices
@@ -40,7 +38,6 @@ FinDashboard is a frontend only finance dashboard that simulates a realistic pro
 - Charts - Recharts
 - Animations - GSAP
 - Icons - Lucide React
-- Fonts - Inter and Poppins
 
 ## Architecture
 It follows a Layered Architecture:
@@ -145,8 +142,6 @@ It is implemented in dashboard.ts (src/api/)
 - deleteTransaction(id) - remove transaction
 - createRecurring(data) - add recurring payments
 - deleteRecurring(id) - remove recurring payments
-
-This makes it easy to swap the mock layer for a real backend later without rewriting UI components.
 
 ## Local Development
 
