@@ -153,7 +153,7 @@ It is implemented in dashboard.ts (src/api/)
 
 1.  **Clone the repository:**
     ```bash
-    git clone [[https://github.com/hemant2725/finboard-assignment.git](https://github.com/hemant2725/findashboard)]
+    git clone https://github.com/hemant2725/findashboard.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
